@@ -4,22 +4,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        int players = 3;
         Scanner scanner = new Scanner(System.in);
+        String[] array = new String[3];
 
-//        System.out.print("Введите количество строк: ");
-//        int n = scanner.nextInt();
-//        scanner.nextLine(); // съедаем лишний переход на новую строку
-
-        Integer[] array = new Integer[2];
-        String str1="Введите количество игроков";
-        String str2="Введите количество кубиков";
-        for (int i = 0; i < 2; i++) {
-            System.out.print(str1 + ": ");
-            array[i] = scanner.nextInt();
+        for (int i = 0; i < players; i++) {
+            System.out.print("Введите строку: ");
+            array[i] = scanner.nextLine();
         }
 
         System.out.println("Вы ввели следующие строки:");
-        for (Integer str : array) {
+        for (String str : array) {
             System.out.println(str);
         }
     }
