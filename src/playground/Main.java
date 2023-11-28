@@ -1,20 +1,31 @@
 package playground;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int players = 3;
         Scanner scanner = new Scanner(System.in);
-        String[] array = new String[3];
 
-        for (int i = 0; i < players; i++) {
-            System.out.print("Введите строку: ");
-            array[i] = scanner.nextLine();
+        System.out.print("Введите количество игроков: ");
+        int length = scanner.nextInt();
+        scanner.nextLine(); // Сброс новой строки после ввода числа
+
+        ArrayList<String> listOfStrings = new ArrayList<>();
+
+        // Ввод строк от пользователя
+        for (int i = 0; i < length; i++) {
+            System.out.print("Введите имя " + (i + 1) + " игрока: ");
+            String input = scanner.nextLine();
+            listOfStrings.add(input);
         }
 
-        System.out.println("Вы ввели следующие строки:");
-        for (String str : array) {
+        // Вывод содержимого ArrayList
+        System.out.println("Содержимое ArrayList:");
+        for (String str : listOfStrings) {
             System.out.println(str);
         }
     }

@@ -21,7 +21,7 @@ public class InstanceInput {
         // Создаем массив для хранения чисел, введенных для каждого экземпляра
 //        int[] numbers = new int[count];
         HashMap<String, String> passportsAndNames = new HashMap<>(count);
-        ArrayList<String> list = new ArrayList<>();
+        ArrayList<String> list = new ArrayList<>(count);
 
 
         for (int i = -1; i < count; i++) {
