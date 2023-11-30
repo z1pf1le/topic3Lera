@@ -36,6 +36,11 @@ public class Main {
             }
             playerssAndScores.put(listOfStrings.get(i), score);
         }
+        int score_comp = 0;
+        for (int j = 0; j < players; j++) {
+            score_comp += GenRand.rand();
+        }
+        playerssAndScores.put("computer", score_comp);
         System.out.println("Счёт: ");
         System.out.println(playerssAndScores);
     }
