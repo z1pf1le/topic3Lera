@@ -17,7 +17,7 @@ public class Main{
         scanner.nextLine(); // Сброс новой строки после ввода числа
 
         System.out.print("Введите количество кубиков: ");
-        int dice = scanner.nextInt();
+        int diceNumber = scanner.nextInt();
         scanner.nextLine(); // Сброс новой строки после ввода числа
 
         ArrayList<String> listOfPlayers = new ArrayList<>();
@@ -28,8 +28,6 @@ public class Main{
             String input = scanner.nextLine();
             listOfPlayers.add(input);
         }
-
-        Game.play(listOfPlayers);
-
+        Game.play(listOfPlayers, diceNumber);
     }
 }
