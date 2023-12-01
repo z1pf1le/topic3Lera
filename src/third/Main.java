@@ -25,23 +25,23 @@ public class Main {
             String input = scanner.nextLine();
             listOfStrings.add(input);
         }
-
-
+        int score = 0;
         //создание экземпляра мапы и заполнение ее именами и количеством набранных очков
-        HashMap<String, Integer> playerssAndScores = new HashMap<>();
-        for (int i = 0; i < players; i++) {
-            int score = 0;
+        HashMap<String, Integer> playersAndScores = new HashMap<>();
+        for (int i = 0; i < players; i++) { //для всех игроков
+
             for (int j = 0; j < players; j++) {
                 score += GenRand.rand();
             }
-            playerssAndScores.put(listOfStrings.get(i), score);
+            playersAndScores.put(listOfStrings.get(i), score);
         }
         int score_comp = 0;
         for (int j = 0; j < players; j++) {
             score_comp += GenRand.rand();
         }
-        playerssAndScores.put("computer", score_comp);
+        playersAndScores.put("computer", score_comp);
         System.out.println("Счёт: ");
-        System.out.println(playerssAndScores);
+        System.out.println(playersAndScores);
+        Winner.is(playersAndScores);
     }
 }

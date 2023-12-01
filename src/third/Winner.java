@@ -4,23 +4,20 @@ import java.util.*;
 
 public class Winner
 {
-    public static void main(String[] args) {
+    public static boolean is(HashMap map) {
         // Пример Map с целочисленными значениями
-        Map<String, Integer> map = new HashMap<>();
-        map.put("A", 10);
-        map.put("B", 30);
-        map.put("C", 20);
+//        HashMap<String, Integer> map = new HashMap<>();
+//        map.put("A", 1);
+//        map.put("B", 2);
+//        map.put("C", 3);
 
-        // Нахождение ключа с самым большим значением
-        String maxKey = null;
-        int maxValue = Integer.MIN_VALUE;
-        for (Map.Entry<String, Integer> entry : map.entrySet()) {
-            if (entry.getValue() > maxValue) {
-                maxKey = entry.getKey();
-                maxValue = entry.getValue();
-            }
+        Iterator<Map.Entry<String, Integer>> iterator = map.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<String, Integer> entry = iterator.next();
+            String key = entry.getKey();
+            Integer value = entry.getValue();
+            System.out.println("Key: " + key + ", Value: " + value);
         }
-
-        System.out.println("Ключ с самым большим значением: " + maxKey + " (" + maxValue + ")");
+        return false;
     }
 }

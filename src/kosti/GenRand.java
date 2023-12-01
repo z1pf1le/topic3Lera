@@ -1,9 +1,9 @@
-package third;
+package kosti;
 
 import java.util.Random;
 
 public class GenRand{
-    public static int rand() {
+    static int rand() {
         int min = 1; // Нижняя граница диапазона
         int max = 6; // Верхняя граница диапазона
 
