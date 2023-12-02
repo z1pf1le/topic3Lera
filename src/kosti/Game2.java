@@ -26,6 +26,8 @@ public class Game2{
 
         }
         System.out.println(scoreCount);
+//        ArHandler.returnPlayerNumber(scoreCount);
+        System.out.println(listOfPlayers.get(ArHandler.returnPlayerNumber(scoreCount)));
         return null;
     }
 }
