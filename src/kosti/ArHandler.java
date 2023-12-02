@@ -11,7 +11,7 @@ public class ArHandler{
 
         int scoresTotal = 0;
         for (int i = 0; i < (scoreCount.size())/2; i++) {
-            scoresTotal = scoreCount.get(i) + scoreCount.get(i / scoreCount.size());
+            scoresTotal = scoreCount.get(i) + scoreCount.get((scoreCount.size()-1)/2); //тут ошибка!!!
             winnersNumber.add(scoresTotal);
         }
         System.out.println(winnersNumber);
