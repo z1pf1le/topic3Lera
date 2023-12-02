@@ -31,6 +31,6 @@ public class MainZaglushka{
         String igrok2 = "Stepan";
         listOfPlayers.add(igrok1);
         listOfPlayers.add(igrok2);
-        Game.play(listOfPlayers, diceNumber);
+        Game2.play(listOfPlayers, diceNumber);
     }
 }
