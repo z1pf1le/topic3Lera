@@ -1,58 +1,46 @@
 package kosti;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class DiceGame {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+//    public static void main(String[] args) throws InterruptedException {
+//        List<String> players = new ArrayList<>();
+//        players.add("Игрок1");
+//        players.add("Игрок2");
+//        int numberOfDice = 3;
+//
+//        String winner = playDiceGame(players, numberOfDice);
+//        System.out.println("Победитель: " + winner);
+//    }
 
-        System.out.print("Введите количество игроков: ");
-        int numPlayers = scanner.nextInt();
+    public static String playDiceGame(List<String> players, int numberOfDice) throws InterruptedException {
+        Map<String, Integer> results = new HashMap<>();
 
-        int[] playerScores = new int[numPlayers];
-        String[] playerNames = new String[numPlayers];
+        for (String player : players) {
+            int total = 0;
+            System.out.print(player + ": ");
+            for (int i = 0; i < numberOfDice; i++) {
+                int diceResult = (int) (Math.random() * 6) + 1; // бросок кубика
+                total += diceResult;
 
-        for (int i = 0; i < numPlayers; i++) {
-            System.out.print("Введите имя игрока " + (i + 1) + ": ");
-            playerNames[i] = scanner.next();
+                Thread.sleep(300);
+                System.out.print(diceResult + " ");
+                Thread.sleep(300);
+            }
+            results.put(player, total);
+            System.out.println("Итог: " + total);
         }
 
-        int numRounds = 7;
-
-        for (int round = 0; round < numRounds; round++) {
-            System.out.println("nРаунд " + (round + 1));
-            for (int i = 0; i < numPlayers; i++) {
-                System.out.println(playerNames[i] + ", нажмите Enter, чтобы кинуть кости");
-                scanner.nextLine(); // очистка буфера
-                scanner.nextLine();
-
-                int diceResult = (int) (Math.random() * 6) + 1; // имитация броска кости
-                playerScores[i] += diceResult;
-                System.out.println(playerNames[i] + " выбросил " + diceResult + ". Очки: " + playerScores[i]);
-            }
-
-            int winnerIndex = 0;
-            int maxScore = playerScores[0];
-            for (int i = 1; i < numPlayers; i++) {
-                if (playerScores[i] > maxScore) {
-                    maxScore = playerScores[i];
-                    winnerIndex = i;
-                }
-            }
-
-            System.out.println("Победитель раунда " + (round + 1) + ": " + playerNames[winnerIndex]);
-            playerScores[winnerIndex] = 0; // обнуляем очки у победителя для следующего раунда
-        }
-
-        int overallWinnerIndex = 0;
-        int overallMaxScore = playerScores[0];
-        for (int i = 1; i < numPlayers; i++) {
-            if (playerScores[i] > overallMaxScore) {
-                overallMaxScore = playerScores[i];
-                overallWinnerIndex = i;
+        // Нахождение победителя
+        int maxScore = 0;
+        String winner = "";
+        for (Map.Entry<String, Integer> entry : results.entrySet()) {
+            if (entry.getValue() > maxScore) {
+                maxScore = entry.getValue();
+                winner = entry.getKey();
             }
         }
 
-        System.out.println("nИтоговый победитель: " + playerNames[overallWinnerIndex] + " с общим количеством очков: " + overallMaxScore);
+        return winner;
     }
 }

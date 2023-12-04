@@ -29,6 +29,7 @@ public class Main{
             listOfPlayers.add(input);
         }
         listOfPlayers.add("Computer"); //добавление Компьютера в конец списка
-        Game.play(listOfPlayers, diceNumber);
+        System.out.println(DiceGame.playDiceGame(listOfPlayers, diceNumber));
+
     }
 }

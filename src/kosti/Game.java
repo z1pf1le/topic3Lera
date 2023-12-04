@@ -10,10 +10,10 @@ public class Game{
             System.out.println("игроки бросают " + j + "й кубик");
             for (int i = 0; i < listOfPlayers.size(); i++) {
                 System.out.println(listOfPlayers.get(i) + " бросает кости");
-                Thread.sleep(1000);
+                Thread.sleep(300);
                 int score = GenRand.rand();
                 System.out.println(score);
-                Thread.sleep(1000);
+                Thread.sleep(300);
                 scoreCount.add(score);
             }
         }
