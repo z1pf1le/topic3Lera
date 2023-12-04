@@ -29,7 +29,11 @@ public class Main{
             listOfPlayers.add(input);
         }
         listOfPlayers.add("Computer"); //добавление Компьютера в конец списка
+        String firstWinner = DiceGame.playDiceGame(listOfPlayers, diceNumber);
+        System.out.println("первый победитель: " + firstWinner);
         System.out.println(DiceGame.playDiceGame(listOfPlayers, diceNumber));
+        String secondWinner = DiceGame.playDiceGame(listOfPlayers, diceNumber);
+        System.out.println("второй победитель: " + secondWinner);
 
     }
 }
