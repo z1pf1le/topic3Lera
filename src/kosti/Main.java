@@ -28,6 +28,7 @@ public class Main{
             String input = scanner.nextLine();
             listOfPlayers.add(input);
         }
+        listOfPlayers.add("Computer"); //добавление Компьютера в конец списка
         Game.play(listOfPlayers, diceNumber);
     }
 }

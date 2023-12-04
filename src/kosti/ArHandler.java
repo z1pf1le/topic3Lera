@@ -10,8 +10,8 @@ public class ArHandler{
         ArrayList<Integer> winnersNumber = new ArrayList<>();
 
         int scoresTotal = 0;
-        for (int i = 0; i < (scoreCount.size())/2; i++) {
-            scoresTotal = scoreCount.get(i) + scoreCount.get((scoreCount.size()-1)/2); //тут ошибка!!!
+        for (int i = 1; i <= (scoreCount.size())/2; i++) {
+            scoresTotal = scoreCount.get(i) + scoreCount.get(((scoreCount.size())/2 + i)); //тут ошибка!!!
             winnersNumber.add(scoresTotal);
         }
         System.out.println(winnersNumber);

@@ -16,13 +16,6 @@ public class Game{
                 Thread.sleep(1000);
                 scoreCount.add(score);
             }
-            System.out.println("компьютер бросает кости");
-            Thread.sleep(1000);
-            int score = GenRand.rand();
-            System.out.println(score);
-            Thread.sleep(1000);
-            scoreCount.add(score);
-
         }
         System.out.println(scoreCount);
     }
