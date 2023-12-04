@@ -71,6 +71,8 @@ public class Main{
         System.out.println("седьмой победитель: " + seventhWinner);
         listOfWinners.add(seventhWinner);
 
-        System.out.println(listOfWinners);
+        //поиск игрока, который больше всех выиграл
+        System.out.println("Больше всех побед одержал: ");
+        System.out.println(FindMostFrequentElement.findMostFrequentElement(listOfWinners));
     }
 }

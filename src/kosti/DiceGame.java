@@ -3,16 +3,6 @@ package kosti;
 import java.util.*;
 
 public class DiceGame {
-//    public static void main(String[] args) throws InterruptedException {
-//        List<String> players = new ArrayList<>();
-//        players.add("Игрок1");
-//        players.add("Игрок2");
-//        int numberOfDice = 3;
-//
-//        String winner = playDiceGame(players, numberOfDice);
-//        System.out.println("Победитель: " + winner);
-//    }
-
     public static String playDiceGame(List<String> players, int numberOfDice) throws InterruptedException {
         Map<String, Integer> results = new HashMap<>();
 
