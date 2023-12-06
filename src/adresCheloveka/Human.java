@@ -12,5 +12,29 @@ public class Human{
         this.birthDate = birthDate;
         this.adress = adress;
     }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getSecondName() {
+        return secondName;
+    }
+
+    public int getBirthDate() {
+        return birthDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Human{" +
+                "firstName='" + firstName + '\'' +
+                ", secondName='" + secondName + '\'' +
+                '}';
+    }
+
+    public Adress getAdress() {
+        return adress;
+    }
 }
 
