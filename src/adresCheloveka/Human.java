@@ -25,16 +25,16 @@ public class Human{
         return birthDate;
     }
 
+    public Adress getAdress(){
+        return adress;
+    }
+
     @Override
     public String toString() {
         return "Human{" +
                 "firstName='" + firstName + '\'' +
                 ", secondName='" + secondName + '\'' +
                 '}';
-    }
-
-    public Adress getAdress() {
-        return adress;
     }
 }
 

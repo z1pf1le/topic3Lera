@@ -20,10 +20,8 @@ public class FindElderOrYounger {
     public static int findMinNObject(List<Human> objects) {
         for (Human obj : objects) {
             int minAge = 0;
-            System.out.println("min");
             if(obj.getBirthDate() < minAge) {
                 minAge = obj.getBirthDate();
-                System.out.println("minAge");
                 System.out.println(obj.getBirthDate());
             }
             return minAge;
