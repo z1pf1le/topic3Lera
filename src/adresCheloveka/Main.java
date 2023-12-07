@@ -36,10 +36,15 @@ public class Main{
 
         //необходимо создать сет объектов, для поиска одного значения
 
-        //найти самого старого
+        //найти дату рождения самого старого
         int eldersAge = FindElderOrYounger.findMaxNObject(list);
+        //поиск самого старого по д/р
         FindUser.byBirthDate(list, eldersAge);
 
-
+        //найти дату рождения самого старого
+//        System.out.println(FindElderOrYounger.findMinNObject(list));
+        int youngersAge = FindElderOrYounger.findMaxFieldValue(list);
+        //поиск самого старого по д/р
+        FindUser.byBirthDate(list, youngersAge);
     }
 }
