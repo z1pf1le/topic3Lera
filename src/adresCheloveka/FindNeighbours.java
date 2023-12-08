@@ -1,23 +1,20 @@
 package adresCheloveka;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class FindNeighbours{
-    public static ArrayList<Human> findObjectsWithSameN(ArrayList<Human> list) {
-        ArrayList<Human> result = new ArrayList<>();
-        if (list.isEmpty()) {
-            return result;
-        }
+    public static int findObjectsWithSameN(ArrayList<Human> list) {
+        for(int i=0; i<list.size(); i++){
+            for(int j=1; j<list.size(); j++){
+                if(list.get(i).getAdress().getStreet().equals(list.get(j).getAdress().getStreet())){
+                    System.out.println(list.get(i));
+                    System.out.println(list.get(j));
+                    return 0;
 
-        // найдем значение поля N у первого объекта в списке
-        Adress nValue = list.get(0).getAdress(); // предположим, что getN() возвращает значение поля N
-
-        // проходим по списку и добавляем объекты с равным значением поля N в результирующий список
-        for (Human obj : list) {
-            if (obj.getAdress() == nValue) {
-                result.add(obj);
+                }
             }
         }
-        return result;
+        return 0;
     }
 }

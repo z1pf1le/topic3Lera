@@ -20,6 +20,7 @@ public class Main{
         Human human5 = new Human("Vladimir", "Lenin", 1850, adress5);
 
 
+
         ArrayList<Human> list = new ArrayList<>(Arrays.asList(human1, human2, human3, human4, human5));
 
         //поиск человека по фамилии
@@ -54,6 +55,7 @@ public class Main{
         //нахожу соселей
         System.out.println("соседи по улице: ");
 
-        System.out.println(FindNeighbours.findObjectsWithSameN(list));
+        FindNeighbours.findObjectsWithSameN(list);
+
     }
 }
