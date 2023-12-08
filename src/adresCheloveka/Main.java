@@ -19,8 +19,6 @@ public class Main{
         Human human4 = new Human("Ad", "Gain", 1991, adress4);
         Human human5 = new Human("Vladimir", "Lenin", 1850, adress5);
 
-
-
         ArrayList<Human> list = new ArrayList<>(Arrays.asList(human1, human2, human3, human4, human5));
 
         //поиск человека по фамилии
@@ -54,7 +52,7 @@ public class Main{
 
         //нахожу соселей
         System.out.println("соседи по улице: ");
-
+        //метод находит совпадение улиц
         FindNeighbours.findObjectsWithSameN(list);
 
     }
