@@ -2,8 +2,7 @@ package fourOne;
 
 public class Cat implements Voice{
     @Override
-    public Cat voice() {
+    public void voice() {
         System.out.println("meow");
-        return null;
     }
 }

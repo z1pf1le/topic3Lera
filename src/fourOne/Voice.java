@@ -1,5 +1,6 @@
 package fourOne;
 
 public interface Voice{
-    public Cat voice();
+    public void voice();
+
 }
