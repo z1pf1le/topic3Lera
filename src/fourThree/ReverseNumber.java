@@ -22,5 +22,17 @@ public class ReverseNumber {
         return arr;
     }
 
+    public static double reverse(int number){
+        Integer[] arr = ReverseNumber.separateDigits(number);
+        int result=0;
+        for(int i = 0; i < arr.length; i++){
+//            Integer preResult = arr[i] * (arr.length-i);
+            int preResult = (int) (Math.pow(10, arr.length-i) * arr[i]);
+            System.out.println(Math.pow(10, arr.length-i) * arr[i]);
+            result += preResult;
+        }
+        return result/10;
+    }
+
 
 }
